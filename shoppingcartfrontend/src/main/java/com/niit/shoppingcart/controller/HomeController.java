@@ -1,90 +1,115 @@
 package com.niit.shoppingcart.controller;
+import javax.servlet.http.HttpSession;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.niit.shoppingcart.dao.UserDAO;
-import com.niit.shoppingcart.daoimpl.UserDAOImpl;
+import com.niit.shoppingcart.dao.CategoryDAO;
+import com.niit.shoppingcart.dao.SupplierDAO;
+import com.niit.shoppingcart.model.Category;
+import com.niit.shoppingcart.model.Product;
+import com.niit.shoppingcart.model.Supplier;
+import com.niit.shoppingcart.model.User;
 
-                 //this class we hve to convert into a controller(mvc)
-                 //we hve to simple annotation(help compiler or jre to generate the code on behalf of u)
-@Controller      //(class becomes controller)  //all the neccesary files will be loaded.
+                 //this class we have to convert into a controller(modelviewcontroller)
+         //we hve to simple annotation(help compiler or jre to generate the code on behalf of u)
+         //(class becomes controller)  //all the neccesary files will be loaded.
 
-public class HomeController {
+@Controller     
+public class HomeController
+{
+Logger log = LoggerFactory.getLogger(HomeController.class);
 
-	
+@Autowired
+User user;
+
+@Autowired
+private CategoryDAO categoryDAO;
+
+@Autowired
+private Category category;
+
+@Autowired
+private SupplierDAO supplierDAO;
+
+@Autowired
+private Supplier supplier;
+
+@Autowired
+private Product product;
+
 	             // want to navigate to landing page or home page.
                	//http://localhost:ipaddress/application name
 	           //http://localhost:ipaddress8080/Shoppingcart/
 	
 	@RequestMapping("/")  //for the landing page
-	public String getlanding()
-	{
-		System.out.println("landing page is loading...");
-		return "index";
-	}
-	
-	@RequestMapping("/home")
-	public String homepage()
-	{
-		System.out.println("homepage is loading...");
-		return "home";
+	public ModelAndView onLoad(HttpSession session){
+		log.debug("Starting of the method onLoad");
+		ModelAndView mv = new ModelAndView("home");
+		session.setAttribute("category",category);
+		session.setAttribute("product",product);
+		session.setAttribute("supplier",supplier);
+		session.setAttribute("categoryList", categoryDAO.list());
+		session.setAttribute("supplierList", supplierDAO.list());
+		log.debug("Ending of the method onLoad");
+		return mv;	
 	}	
 	
-	@RequestMapping("/login")
-	public ModelAndView showLoginPage()
+	@RequestMapping(value="/login")
+	public String  login(@RequestParam(value="error",required=false)String error,@RequestParam(value="logout",required=false) String logout,Model model)
 	{
-		     //model and view=to specify which page to navigate
-		    // wat data  i need to be carry.
-		   // navigate to login.jsp
+		if(error!=null)
+		{
+			System.out.println("Error..");
+			model.addAttribute("loginerror","...Invalid username and password");
+		}
 		
-		ModelAndView mv = new ModelAndView("home");
-		mv.addObject("msg", "you clicked login link");
-		mv.addObject("showLoginPage","true");
-	       
-	      //in login.jsp-${msg}
-		return mv;
+		if(logout!=null)
+		{
+			System.out.println("logout called..");
+			model.addAttribute("loginmsg","...you have been logged out");
+		}
+		
+		return "login";
 	}
 	
 	@RequestMapping("/register")
-	public ModelAndView showRegistrationPage()
+	public ModelAndView signup(Model m)
 	{
-		ModelAndView mv = new ModelAndView("home");
-		mv.addObject("msg","you clicked registration link");
-		mv.addObject("showRegistrationPage","true");
+		
+		ModelAndView mv = new ModelAndView("/home");
+		m.addAttribute("user",user);
 		return mv;
+	}	
+	
+	@RequestMapping(value="/admin")
+	public String showAdminPage(Model m)
+	{
+		return "admin";
 	}
 	
-		@RequestMapping("/validate")
-		public ModelAndView validate(@RequestParam("username")String id ,@RequestParam("password")String pswd)
-		{
-			System.out.println("in validate method");
-			System.out.println("id:"+id);
-			System.out.println("pswd:"+pswd);
-			ModelAndView mv = new ModelAndView("home");
-			
-	     UserDAO userDAO = new UserDAOImpl(); //will remove new later
-			
-			if(userDAO.isValidCredentials(id,pswd)==true)
-            {
-	        mv.addObject("successMsg","You logged in successfully");
-            }
-            else
-            {
-	        mv.addObject("errorMsg", "Invalid Credentials..please try again");
-            }	
-			
-			return mv;
-			
-		}
-}	
-	        //need to validate - actually-need to write DAO-get values from tables
-			//temporarily-assuming that id:niit and pswd:niit@123 are valid credentials
-			//if the credentials are valid->show message "welcome to shopping cart"
-		    //else show message invalid credentials+login page=both shld be displayed in homepage
-			
-		
-			
-		    
-		
+	@RequestMapping("/home")  //for the landing page
+	public ModelAndView onHome(HttpSession session){
+		log.debug("Starting of the method onLoad");
+		ModelAndView mv = new ModelAndView("home");
+		session.setAttribute("category",category);
+		session.setAttribute("product",product);
+		session.setAttribute("supplier",supplier);
+		session.setAttribute("categoryList", categoryDAO.list());
+		session.setAttribute("supplierList", supplierDAO.list());
+		log.debug("Ending of the method onLoad");
+		return mv;	
+	}	
+	
+	@RequestMapping(value="/contactus")
+	public String contactuspage()
+	{
+		return "contactus";
+	}
+}

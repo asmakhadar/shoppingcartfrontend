@@ -1,0 +1,9 @@
+com\niit\shoppingcart\controller\CartController.class
+com\niit\shoppingcart\controller\AdminController.class
+com\niit\shoppingcart\controller\CategoryController.class
+com\niit\shoppingcart\handler\RegistrationHandler.class
+com\niit\shoppingcart\controller\UserController.class
+com\niit\shoppingcart\dao\temp\UserDAO.class
+com\niit\shoppingcart\controller\SupplierController.class
+com\niit\shoppingcart\controller\ProductController.class
+com\niit\shoppingcart\controller\HomeController.class
