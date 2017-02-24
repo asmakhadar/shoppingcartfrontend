@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1><center>Collaboration</center></h1>
+
+<hr>
+<a href="#/blog">Blog</a>
+<a href="#/friend">Friend</a>
+<a href="#/job">Job</a>
+<a href="#/register">Sign Up</a>
+<a href="#/listUser">UserList</a>
+<a href="#/blogList">BlogList</a>
+<a href="#/jobList">JobList</a>
+<a href="#/forum">Forum</a>
+<a href="#/forumList">ForumList</a>
+<hr>
+
+<div ng-view></div>
+
+</body>
+<script src="lib/angular.min.js"></script>
+<script src="lib/angular-route.js"></script>
+
+<script src="js/app.js"></script>
+<script src="js/HomeController.js"></script>
+<script src="js/BlogController.js"></script>
+<script src="js/FriendController.js"></script>
+<script src="js/JobController.js"></script>
+<script src="js/ForumController.js"></script>
+<script src="js/UserController.js"></script>
+<script src="js/UserService.js"></script>
+<script src="js/BlogService.js"></script>
+<script src="js/JobService.js"></script>
+<script src="js/ForumService.js"></script>
+</html>

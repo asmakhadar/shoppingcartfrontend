@@ -13,9 +13,10 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.niit.shoppingcart.dao.SupplierDAO;
-import com.niit.shoppingcart.model.Category;
+
 import com.niit.shoppingcart.model.Supplier;
 
+	@SuppressWarnings("deprecation")
 	@Repository("supplierDAO")
 	@EnableTransactionManagement
 
@@ -31,17 +32,19 @@ import com.niit.shoppingcart.model.Supplier;
 		log.debug("Successfully estblished connection");
 		}
 		
-		@SuppressWarnings({ "rawtypes", "deprecation", "unchecked" })
+		
+		@SuppressWarnings("unchecked")
 		@Transactional
 		public List<Supplier> list() 
 		{
 			log.debug("Starting method : List");
 			String hql_string="FROM Supplier";
+			@SuppressWarnings("rawtypes")
 			Query query=sessionFactory.getCurrentSession().createQuery(hql_string);
 			return query.list();
 		}
 		
-		 @SuppressWarnings({ "rawtypes", "deprecation", "unchecked" })
+		 @SuppressWarnings({ "rawtypes", "unchecked" })
 		@Transactional
 		public Supplier get(String id)
 		 {
@@ -80,7 +83,7 @@ import com.niit.shoppingcart.model.Supplier;
 			    return true;
 		}
 		 
-		 @SuppressWarnings({ "rawtypes", "deprecation" })
+		 @SuppressWarnings({ "rawtypes" })
 		@Transactional
 		public boolean delete(String id)
 		 {
@@ -99,7 +102,7 @@ import com.niit.shoppingcart.model.Supplier;
 		}
 
 		
-		@SuppressWarnings({ "deprecation", "rawtypes", "unchecked" })
+		@SuppressWarnings({ "rawtypes", "unchecked" })
 		@Transactional
 		public Supplier getByName(String name)
 			{

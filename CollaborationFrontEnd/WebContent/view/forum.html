@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div ng-controller="ForumController">
+<h2 style="color:red">{{errorMessage}}</h2>
+</div>
+<h2>FORUM</h2>
+
+<form>
+
+NAME: <input type="text" ng-model="forum.name" name="name"><br><br>
+DESCRIPTION: <input type="text" ng-model="forum.description" name="description"><br><br>
+USERID: <input type="text" ng-model="forum.userID" name="userID"><br><br>
+DATE: <input type="text" ng-model="forum.dateTime" name="dateTime"><br><br>
+STATUS: <input type="text" ng-model="forum.status" name="status"><br><br>
+
+<input type="button" ng-click="addForum()" value="ADD">
+<input type="reset" value="CLEAR">
+
+</form>
+
+</body>
+</html>

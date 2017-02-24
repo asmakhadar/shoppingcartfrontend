@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div ng-controller="JobController">
+<h2 style="color:red">{{errorMessage}}</h2>
+</div>
+<h2>JOB</h2>
+
+<form>
+
+TITLE: <input type="text" ng-model="job.title" name="title"><br><br>
+DESCRIPTION: <input type="text" ng-model="job.description" name="description"><br><br>
+USERID: <input type="text" ng-model="job.userID" name="userID"><br><br>
+DATE: <input type="text" ng-model="job.dateTime" name="dateTime"><br><br>
+QUALIFICATION: <input type="text" ng-model="job.qualification" name="qualification"><br><br>
+STATUS: <input type="text" ng-model="job.status" name="status"><br><br>
+
+<input type="button" ng-click="addJob()" value="ADD">
+<input type="reset" value="CLEAR">
+
+</form>
+
+</body>
+</html>

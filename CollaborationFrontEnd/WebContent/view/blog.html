@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div ng-controller="BlogController">
+<h2 style="color:red">{{errorMessage}}</h2>
+</div>
+
+<h2>BLOG</h2>
+<form>
+
+NAME: <input type="text" ng-model="blog.name" name="name"><br><br>
+USER_ID: <input type="text" ng-model="blog.userID" name="user_id"><br><br>
+DATE: <input type="text" ng-model="blog.dateTime" name="date_time"><br><br>
+STATUS: <input type="text" ng-model="blog.status" name="status"><br><br>
+REASON: <input type="text" ng-model="blog.reason" name="reason"><br><br>
+DESCRIPTION: <input type="text" ng-model="blog.description" name="description"><br><br>
+<input type="button" ng-click="registerBlog()" value="ADD">
+<input type="reset" value="CLEAR">
+
+</form>
+
+
+</body>
+</html>

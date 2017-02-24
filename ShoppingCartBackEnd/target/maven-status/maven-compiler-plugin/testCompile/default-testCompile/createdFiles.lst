@@ -1,4 +1,6 @@
 com\niit\shoppingcart\TestCategoryDAO.class
 com\niit\shoppingcart\TestSupplierDAO.class
 com\niit\shoppingcart\TestUserDAO.class
+com\niit\shoppingcart\BillingDAOTestCase.class
 com\niit\shoppingcart\TestProductDAO.class
+com\niit\shoppingcart\PaymentDAOTestCase.class

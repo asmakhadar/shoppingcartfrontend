@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>list of forums</h1>
+
+<table border="3px">
+<tr>
+<th>Id</th>
+<th>Name</th>
+<th>Description</th>
+<th>UserID</th>
+<th>Date</th>
+<th>Status</th>
+</tr>
+
+<tr ng-repeat="f in forums">
+<td>{{f.id}}</td>
+<td>{{f.name}}</td>
+<td>{{f.description}}</td>
+<td>{{f.userID}}</td>
+<td>{{f.dateTime}}</td>
+<td>{{f.status}}</td>
+</tr>
+
+</table>
+
+</body>
+</html>

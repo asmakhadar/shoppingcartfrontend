@@ -13,7 +13,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.niit.shoppingcart.dao.ProductDAO;
-import com.niit.shoppingcart.model.Category;
+
 import com.niit.shoppingcart.model.Product;
 
 @Repository("productDAO")
@@ -31,22 +31,26 @@ public class ProductDAOImpl implements ProductDAO
 			log.debug("Successfully estblished connection");
 		}
 
+	@SuppressWarnings({ "unchecked", "deprecation" })
 	@Transactional
 	public List<Product> list()
 	{
 			log.debug("Starting method : List");
 			String hql_string = "FROM Product";
+			@SuppressWarnings("rawtypes")
 			Query query = sessionFactory.getCurrentSession().createQuery(hql_string);
 			log.debug("Ending method : List");
 			return query.list();
 	}
 		
+	
 	@Transactional
 	 public Product get(String id)
 	 {
 		log.debug("Starting method : Get");
 		String hql= "FROM Product where id='"+id+"'";
 		Query query= sessionFactory.getCurrentSession().createQuery(hql);
+		
 		List<Product> list=query.list();
 		return list.get(0);
 	 }
@@ -81,12 +85,14 @@ public class ProductDAOImpl implements ProductDAO
 			return true;
 	 }
 		
+	@SuppressWarnings("deprecation")
 	@Transactional
 	 public boolean delete(String id)
 	 {
 			try 
 			{
 				String sql = "DELETE FROM Product where id = '" + id + "'";
+				@SuppressWarnings("rawtypes")
 				Query query = sessionFactory.getCurrentSession().createQuery(sql);
 				query.executeUpdate();
 			}
