@@ -30,8 +30,6 @@ import javax.persistence.Table;
 	private String dateTime;	
 
 	private String status;
-
-	private String reason;
 	
    @Lob
 	private String description;
@@ -78,13 +76,6 @@ import javax.persistence.Table;
 		this.status = status;
 	}
 
-	public String getReason() {
-		return reason;
-	}
-
-	public void setReason(String reason) {
-		this.reason = reason;
-	}
 
 	public String getDescription() {
 		return description;

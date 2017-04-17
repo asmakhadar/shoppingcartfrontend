@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+
+<title>Insert title here</title>
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+ <style>
+  body{
+		background:url(resources/image/yl.jpg);
+	}
+  </style> 
+
+</head>
+<body>
+<h2></h2>
+<div ng-controller="ForumController as Xctrl">
+<div ng-controller= "FunctionController as ctrl">
+<div class="container-fluid" ng-repeat="f in forums">      
+    							
+						<div class="col-xs-8">
+			<div class="panel panel-info" >
+				<div class="panel-heading">
+					<div class="row">	
+
+				<div class="panel-body" style="background-color:lightgray">
+
+					<div class="row">
+						<div class="col-xs-10">
+
+                    <span class="w3-large"><h3>Forum name: {{f.name}}</h3></span>
+
+						 <span class="w3-xlarge"><h3>Username: {{f.userID}}</h3></span>
+							  
+							   <span class="w3-large"><h3>Description: {{f.description}}</h3></span><br>
+							   
+							   <span class="w3-large"><h3>Date & Time: {{f.dateTime}}</h3></span><br>
+							   
+							 </div>
+							 
+							<div class="col-xs-2">
+	 <a ng-hide="f.status == 'A'" class="btn btn-success btn-md" href="" data-ng-click="ctrl.acceptForum(f)">Accept Forum </a>
+	  <a ng-hide="f.status == 'R'" class="btn btn-danger btn-md" href="" data-ng-click="ctrl.rejectForum(f)">Reject Forum</a>
+							</div>
+						</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+					</div>
+					</div>
+					</body>
+					</html>
+

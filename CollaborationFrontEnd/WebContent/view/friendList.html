@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+
+<title>Insert title here</title>
+ <style>
+  body{
+		background: url(resources/image/fd.jpg);
+	}
+  </style> 
+</head>
+
+<body>
+<div ng-controller="FriendController as ctrl">
+</div>
+
+
+<div class="container-fluid" ng-repeat="f in friends">      
+    							
+						<div class="col-xs-8">
+			<div class="panel panel-info" >
+				<div class="panel-heading">
+					<div class="row">	
+
+				<div class="panel-body" style="background-color:white">
+
+<div class="container">
+<div class="row">
+<div class="col-xs-2">
+
+		<img src="resources/image/user2.jpg" alt="user" width="100px" height="100px">
+							</div>
+							<br><br>
+<div class="row">
+<div class="col-xs-2">
+             <span class="w3-xlarge">{{f}}</span></div>
+							 
+<div class="col-xs-2">	
+ <a class="btn btn-warning btn-block" href="#/chat" data-ng-click="applied()">Chat</a>
+
+ <span><button type="button" class="btn btn btn-primary btn-block" ng-click="unFriend(f)">Unfriend</button></span>
+     </div>
+     </div>
+     </div>
+     </div>
+	</div>	
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				
+					
+					</body>
+					</html>
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+ <style>
+  body{
+		background: url(resources/image/friend3.jpg);
+	}
+  </style>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+</head>
+
+<body>
+<div class="w3-container" ng-repeat="p in pendingRequest">
+ <!-- <!--  <h2>Pending friend request</h2> -->
+
+  <div class="w3-card-4 w3-dark-grey" style="width:30%">
+
+    <div class="w3-container w3-center">
+  
+      <h2><center>Friend Request</center></h2>
+      <br>
+     <center><img src="resources/image/user2.jpg" alt="user" style="width:20%"></center> 
+     <center><span class="w3-large"><h2>{{p}}</h2></span></center> 
+      <div class="w3-section">
+    <center> <a href="" ng-click="acceptFriend(p)" class="btn btn-warning">AcceptFriend</a>
+     <a href="" ng-click="rejectFriend(p)" class="btn btn-danger">RejectFriend</a>  </center> 
+      </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
+
+
+
+
+<!--  <!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<style>
+  body{
+		background: url(imagee/mm.jpg) center center fixed no-repeat;
+		background-size:cover;
+		
+	}
+	</style>
+<body>
+
+
+<div class="w3-container w3-half">
+  <h1>PENDING REQUESTS</h1>
+  <ul class="w3-ul w3-card-4" ng-repeat="p in pendingRequest">
+    <li class="w3-padding-8">
+      <span onclick="this.parentElement.style.display='none'" 
+      class="w3-closebtn w3-padding w3-margin-right w3-medium">&times;</span>
+     
+      <span class="w3-xlarge"><h2>{{p}}</h2></span>
+    <span><img src="resources/image/user.jpg" alt="user" style="width:50%"></span>
+    <span><a href="" ng-click="acceptFriend(p)" class="w3-button w3-green">AcceptFriend</a></span>
+    <span><a href="" ng-click="rejectFriend(p)" class="w3-button w3-red">RejectFriend</a></span>
+    </li>
+  
+  </ul>
+</div>
+</body>
+</html> 
+
+ -->
+
+
+
+

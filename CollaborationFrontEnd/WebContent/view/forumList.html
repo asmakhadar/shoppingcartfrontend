@@ -2,31 +2,64 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+
 <title>Insert title here</title>
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+ <style>
+  body{
+		background:url(resources/image/pink.jpg);
+		
+	}
+  
+  </style> 
+  
+
 </head>
 <body>
-<h1>list of forums</h1>
+<div ng-controller="ForumController">
+</div>
 
-<table border="3px">
-<tr>
-<th>Id</th>
-<th>Name</th>
-<th>Description</th>
-<th>UserID</th>
-<th>Date</th>
-<th>Status</th>
-</tr>
 
-<tr ng-repeat="f in forums">
-<td>{{f.id}}</td>
-<td>{{f.name}}</td>
-<td>{{f.description}}</td>
-<td>{{f.userID}}</td>
-<td>{{f.dateTime}}</td>
-<td>{{f.status}}</td>
-</tr>
+<div class="container-fluid" ng-repeat="f in forums">  
+<div ng-if="f.status == 'A'">	    
+    							
+						<div class="col-xs-7">
+			<div class="panel panel-info" >
+				<div class="panel-heading">
+					<div class="row">	
 
-</table>
+				<div class="panel-body" style="background-color:#ff9999">
 
-</body>
-</html>
+					<div class="row">
+						<div class="col-xs-10">
+
+                    <span class="w3-large"><h3>Forum name: {{f.name}}</h3></span>
+
+						 <span class="w3-xlarge"><h3>Username: {{f.userID}}</h3></span>
+						
+							<!--  <span class="w3-large"><h3>Status: {{f.status}}</h3></span><br> -->
+							  
+							   <span class="w3-large"><h3>Description:<p> {{f.description}}</p></h3></span><br>
+							   
+							   <span class="w3-small"><h3>Date & Time: {{f.dateTime}}</h3></span><br>
+							   
+							 </div>
+							 
+							<div class="col-xs-2">
+							<br><br><br>
+	<!-- <button type="button" class="btn btn btn-primary"  ng-click="applied()">Accept</button>
+     <br>
+     <br>
+     <button type="button" class="btn btn btn-primary"  ng-click="applied()">Reject</button> -->
+							</div>
+						</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+					</div>
+					</body>
+					</html>
+

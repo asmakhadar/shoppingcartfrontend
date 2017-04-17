@@ -1,0 +1,116 @@
+ <!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <style>
+  body{
+		background: url(resources/image/LOGIN.jpg);
+	}
+  </style> 
+  
+  <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Open+Sans:600'>
+
+      <link rel="stylesheet" href="lib/login css/css/style.css">
+
+</head>
+ 
+<body>
+
+ <div ng-controller="UserController as ctrl">
+ 
+
+  <div class="login-wrap">
+	<div class="login-html">
+		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Log In</label>
+		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+		<div class="login-form">
+			<div class="sign-in-htm">
+			<br>
+			<br>
+			<form name="form" ng-submit="ctrl.login()" role="form">
+				<div class="group">
+					<label for="id" class="label">Username</label>
+					<input id="id" ng-model="user.id" type="text" class="input" placeholder="username" autofocus>
+				</div>
+				<div class="group">
+					<label for="password" class="label">Password</label>
+					<input id="password" ng-model="user.password" type="password" class="input" data-type="password" placeholder="password">
+				</div>
+				<div class="group">
+					<input id="check" type="checkbox" class="check" checked>
+					<label for="check"><span class="icon"></span> Keep me Logged in</label>
+				</div>
+				<div class="group">
+					<input type="submit" class="button" value="Login">
+				</div>
+				<hr>
+				<div class="foot-lnk">
+					<a href="#forgot">Forgot Password?</a>
+				</div>
+				</form>
+			</div>
+			
+			
+			 <div class="sign-up-htm">
+			<br>
+			<form name="form" ng-submit="ctrl.registerUser()" role="form">
+				<div class="group">
+					<label for="name" class="label">Username</label>
+					<input id="name" ng-model="user.id" type="text" class="input" data-type="id" placeholder="Enter your username" required autofocus>
+				</div>
+				<div class="group">
+					<label for="name" class="label">Name</label>
+					<input id="name" ng-model="user.name" type="text" class="input" data-type="name" placeholder="Enter your name" required>
+				</div>
+				<div class="group">
+					<label for="password" class="label">Password</label>
+					<input id="password" ng-model="user.password" type="password" class="input" data-type="password" placeholder="Enter password" required>
+				</div>
+				<div class="group">
+					<label for="role" class="label">Date of Birth</label>
+					<input id="role" ng-model="user.date_of_birth" type="text" class="input" data-type="date_of_birth" placeholder="DD:MM:YYYY" required>
+				</div>
+				<div class="group">
+					<label for="email" class="label">Email Address</label>
+					<input id="email" ng-model="user.email" type="text" class="input" data-type="email" placeholder="Enter email address" required>
+				</div>
+				<!-- <div class="group">
+					<label for="email" class="label">Date of Birth</label>
+					<input id="email" ng-model="user.date_of_birth" type="text" class="input" data-type="date_of_birth" placeholder="Enter your Date of Birth">
+				</div>
+				<div class="group">
+					<label for="name" class="label">Company</label>
+					<input id="name" ng-model="user.id" type="text" class="input" data-type="id" placeholder="Enter your username" autofocus>
+				</div>
+				<div class="group">
+					<label for="name" class="label">Skills</label>
+					<input id="name" ng-model="user.name" type="text" class="input" data-type="name" placeholder="Enter your name">
+				</div>
+				
+				<div class="group">
+					<label for="mobile_number" class="label">AboutU</label>
+					<input id="mobile_number" ng-model="user.phone_number" type="text" class="input" data-type="mobile_number" placeholder="Enter mobile number">
+				</div>
+				<div class="group">
+					<label for="email" class="label">Gender</label>
+					<input id="email" ng-model="user.email" type="text" class="input" data-type="email" placeholder="Enter email address">
+				</div> -->
+				
+				<div class="group">
+					<input type="submit" class="button" value="Sign Up">
+				</div>
+				<hr>
+				<div class="foot-lnk">
+				</div>
+				
+				</form>
+			</div>
+		</div>
+	</div>
+</div> 
+
+ </div>
+</body>
+</html>
+ 

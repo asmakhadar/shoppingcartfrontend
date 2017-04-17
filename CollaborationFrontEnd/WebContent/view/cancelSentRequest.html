@@ -1,0 +1,83 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+  body{
+		background: url(resources/image/friend4.jpg);
+	}
+  </style> 
+</head>
+
+
+<body>
+<br><br>
+
+            <h1> Cancel Sent Request</h1>
+
+<br><br>
+<div class="col-xs-4">
+<div class="panel panel-default">
+
+  <table class="table">
+
+<tr ng-repeat="s in sentfriends">
+<td>{{s}}</td>
+
+<div class="col-xs-2">
+<td><a href="#/cancelSentRequest" ng-click="cancelSentRequest(s)" class="btn btn-primary">cancelRequest</a></td>
+</div>
+</tr>
+  </table>
+</div>
+</div>
+</body>
+</html>
+ 
+
+
+
+
+
+
+
+ <!-- <!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<style>
+  body{
+		background: url(imagee/mm.jpg) center center fixed no-repeat;
+		background-size:cover;
+		
+	}
+	</style>
+<body>
+
+
+<div class="w3-container w3-half">
+  <h1>CANCEL REQUEST</h1>
+  <ul class="w3-ul w3-card-4" ng-repeat="c in sentfriends">
+    <li class="w3-padding-8">
+      <span onclick="this.parentElement.style.display='none'" 
+      class="w3-closebtn w3-padding w3-margin-right w3-medium">&times;</span>
+     
+      <span class="w3-xlarge"><h2>{{c}}</h2></span>
+    <span><img src="resources/image/user.jpg" alt="user" style="width:50%"></span>
+    <span><a href="" ng-click="cancelSentRequest(c)" class="btn btn-primary">cancelRequest</a></span>
+    </li>
+  
+  </ul>
+</div>
+</body>
+</html> 
+
+ 
+
+
+
+ -->

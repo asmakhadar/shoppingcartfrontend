@@ -1,14 +1,77 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Page title - Sitename</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="Description" lang="en" content="ADD SITE DESCRIPTION">
+		<meta name="author" content="ADD AUTHOR INFORMATION">
+		<meta name="robots" content="index, follow">
 
-<div ng-controller="HomeController">
-<h2>{{msg}}</h2>
-</div>
+		<!-- icons -->
+		<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+		<link rel="shortcut icon" href="favicon.ico">
 
-</body>
+		<!-- Bootstrap Core CSS file -->
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+		<!-- Override CSS file - add your own CSS rules -->
+		<link rel="stylesheet" href="assets/css/styles.css">
+
+		<!-- Conditional comment containing JS files for IE6 - 8 -->
+		<!--[if lt IE 9]>
+			<script src="assets/js/html5.js"></script>
+			<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+		 <style>
+  body{
+		background:url(resources/image/home2.jpg);
+	}
+  </style>
+	<body>
+
+			<div class="row margin-b-4">
+				<div class="col-sm-6">
+				<a href="#/blogList"><img class="img-responsive thumbnail" src="resources/image/blog4.jpg" alt="blog" width="600px" height="300px"></a>
+					<div class="caption">
+						
+					</div>
+				</div>
+				<div class="col-sm-6">
+				<a href="#/jobList"><img class="img-responsive thumbnail" src="resources/image/job2.jpg" alt="job" width="600px" height="300px"></a>
+				</div>
+				<div class="caption">
+						
+					</div>
+			</div>
+			<!-- /.row -->
+
+			<div class="row margin-b-2">
+				<div class="col-sm-6">
+					<a href="#/eventList"><img class="img-responsive thumbnail" src="resources/image/event2.jpg" alt="event" width="600px" height="300px"></a>
+				
+				<div class="caption">
+						
+					</div></div>
+				
+				<div class="col-sm-6">
+					<a href="#/forumList"><img class="img-responsive thumbnail" src="resources/image/forum.jpg" alt="forum" width="600px" height="300px"></a>
+				<div class="caption">
+						
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- /.container-fluid -->
+
+		<!-- JQuery scripts -->
+	    <script src="assets/js/jquery-1.11.2.min.js"></script>
+
+		<!-- Bootstrap Core scripts -->
+		<script src="assets/js/bootstrap.min.js"></script>
+  </body>
 </html>
+

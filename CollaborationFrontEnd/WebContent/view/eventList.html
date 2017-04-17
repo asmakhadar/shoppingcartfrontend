@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+
+<title>Insert title here</title>
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<style>
+  body{
+		background:url(resources/image/event4.jpg);
+		
+	}
+  
+  </style> 
+  
+
+</head>
+<body>
+<div ng-controller="EventController">
+</div>
+
+<h2><center>Welcome to Events</center></h2> 
+<br>
+<div class="container-fluid" ng-repeat="e in events">      
+    							
+						<div class="col-xs-7">
+			<div class="panel panel-info" >
+				<div class="panel-heading">
+					<div class="row">	
+
+				<div class="panel-body" style="background-color:#99ffff">
+
+					<div class="row">
+						<div class="col-xs-10">
+
+						   <span class="w3-xlarge"><h3>Event Name:<p> {{e.name}}</p></h3></span>
+						
+						   <span class="w3-large"><h3>Venue:<p> {{e.venue}}</p></h3></span>
+						 
+						   <span class="w3-large"><h3>Time:<p> {{e. date_time}}</p></h3></span>
+							
+							<br>
+							 </div>
+							 
+							<div class="col-xs-2">
+							<br><br><br>
+	<!-- <button type="button" class="btn btn btn-primary"  ng-click="applied()">Accept</button>
+     <br>
+     <br>
+     <button type="button" class="btn btn btn-primary"  ng-click="applied()">Reject</button> -->
+							</div>
+						</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				
+					</div>
+					</body>
+					</html>
+
+

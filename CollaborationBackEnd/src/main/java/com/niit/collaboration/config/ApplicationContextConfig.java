@@ -13,8 +13,12 @@ package com.niit.collaboration.config;
 	import org.springframework.orm.hibernate5.HibernateTransactionManager;
 	import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-    import com.niit.collaboration.model.Blog;
+import com.niit.collaboration.model.Blog;
+import com.niit.collaboration.model.BlogComment;
+import com.niit.collaboration.model.Event;
+import com.niit.collaboration.model.Fileupload;
 import com.niit.collaboration.model.Forum;
+import com.niit.collaboration.model.Friend;
 import com.niit.collaboration.model.Job;
 import com.niit.collaboration.model.User_Detail;
 
@@ -41,7 +45,7 @@ import com.niit.collaboration.model.User_Detail;
 		Properties properties= new Properties();
 		properties.put("hibernate.show_sql","true");
 		properties.put("hibernate.dialect","org.hibernate.dialect.Oracle10gDialect");
-	 properties.put("hibernate.hbm2ddl.auto","update");
+	  // properties.put("hibernate.hbm2ddl.auto","update");
 		return properties;
 	}
 
@@ -53,9 +57,13 @@ import com.niit.collaboration.model.User_Detail;
 		LocalSessionFactoryBuilder sessionBuilder = new LocalSessionFactoryBuilder(dataSource);
 		sessionBuilder.addProperties(getHibernateProperties());
 		sessionBuilder.addAnnotatedClass(User_Detail.class);
-		sessionBuilder.addAnnotatedClass(Blog.class);
 		sessionBuilder.addAnnotatedClass(Job.class);
 		sessionBuilder.addAnnotatedClass(Forum.class);
+		sessionBuilder.addAnnotatedClass(Event.class);
+		sessionBuilder.addAnnotatedClass(Friend.class);
+		sessionBuilder.addAnnotatedClass(Fileupload.class);
+		sessionBuilder.addAnnotatedClass(Blog.class);
+		sessionBuilder.addAnnotatedClass(BlogComment.class);
 	    return sessionBuilder.buildSessionFactory();
 	}
 	

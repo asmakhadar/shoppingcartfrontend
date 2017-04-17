@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+
+<title>Insert title here</title>
+</head>
+ <style>
+ body
+ {
+  background-image: url(resources/image/bckgd.jpg);
+  }
+ </style> 
+
+
+<body>
+<div class="container"  data-ng-controller="FunctionController as ctrl">
+<div class="container-fluid" ng-repeat="u in users">      
+    							
+						<div class="col-xs-8">
+			<div class="panel panel-info" >
+				<div class="panel-heading">
+					<div class="row">	
+
+				<div class="panel-body" style="background-color:#9fbedf">
+
+					<div class="row">
+						<div class="col-xs-10">
+						 <span class="w3-xlarge"><h3>User Name: {{u.name}}</h3></span>
+						 
+						<span class="w3-xlarge"><h3>Email: {{u.email}}</h3></span>
+							 
+							 <span class="w3-large"><h3>Date of birth: {{u.date_of_birth}}</h3></span>
+							
+							 </div>
+							 
+							<div class="col-xs-2">
+	  <a ng-hide="u.status == 'A'" class="btn btn-success btn-md" href="" data-ng-click="ctrl.acceptUser(u)">Accept User </a>
+	  <a ng-hide="u.status == 'R'" class="btn btn-danger btn-md" href="" data-ng-click="ctrl.rejectUser(u)">Reject User</a>
+							</div>
+						</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+</div>
+					</body>
+					</html>
+

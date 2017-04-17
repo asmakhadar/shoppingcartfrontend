@@ -69,6 +69,11 @@ public class JobDAOImpl implements JobDAO
 			 return query.list();
 		}
 
+		@Transactional
+		public void update(Job job) 
+		{
+			sessionFactory.getCurrentSession().update(job);			
+		}
 
 
 }

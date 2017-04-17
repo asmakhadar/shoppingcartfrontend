@@ -28,6 +28,12 @@ public class TestJob {
 	    jobDAO.add(job);
 		
 		/*job.setId(12);
+	    job.setDateTime("24/02/2017");
+		job.setDescription("cfdf");
+		job.setQualification("wehgg");
+		job.setStatus("sdfg");
+		job.setUserID("78");
+		job.setTitle("fff");;
 		jobDAO.delete(job);*/
 		
 	    System.out.println("Success");

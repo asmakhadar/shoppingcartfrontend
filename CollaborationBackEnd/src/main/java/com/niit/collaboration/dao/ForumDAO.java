@@ -15,4 +15,6 @@ public interface ForumDAO {
 		
 		public List<Forum> Forumlist();
 
+		public void update(Forum forum);
+
 }

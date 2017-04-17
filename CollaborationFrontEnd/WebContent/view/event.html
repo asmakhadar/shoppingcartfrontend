@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+ <style>
+  body{
+		background:url(resources/image/event1.jpg);
+		
+	}
+  
+  </style> 
+  
+
+</head>
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<body>
+
+  <div class="w3-container">
+  
+  <div class="w3-card-4" style="width:50%;">
+    <header class="w3-container w3-blue">
+      <h1>Post Your Event</h1>
+    </header>
+    
+      <form class="w3-container ">
+  <br>
+  <p>          
+  <label class="w3-label w3-validate">Event Title</label></p>
+  <input class="w3-input" type="text" ng-model="event.name"  name="name" placeholder="Enter event title" ng-minlength="5" ng-maxlength="100" required>
+  <p>      
+  <label class="w3-label w3-validate">Time</label></p>
+  <input class="w3-input" type="text" ng-model="event.date_time" name="date_time" placeholder="Enter event date" ng-minlength="5" ng-maxlength="100" required>
+  <p>      
+  <label class="w3-label w3-validate">Venue</label></p>
+  <input class="w3-input" type="text" ng-model="event.venue" name="venue" placeholder="Enter event venue" ng-minlength="5" ng-maxlength="100" required>       
+   <br>  
+  
+   <br>  
+ <footer class="w3-container w3-blue">
+  <button class="w3-btn w3-success w3-right" value="addevent" ng-click="registerEvent()">POST EVENT</button></p>
+  </footer>
+  </form>
+  
+  
+</form>
+</div>
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<style>
+ body
+ {
+  background-image: url(resources/image/bg.jpg);
+  }
+  </style>
+<body>
+<h2>EVENT</h2>
+
+<div class="container" style="align:center">
+			<div class="row">  
+                <div class="col-sm-6">
+                    <div class="panel panel-default" >
+                     <div class="panel-body" style="background-color:white">
+                     <form role="form" ng-submit="registerEvent()">
+					<table class="table table-striped">
+					
+<tr>
+							
+							<tr>
+							<th align="center" width="190"><font color="black">Name</font></th>
+							<td align="left" ><font color="black"> <input type="text" ng-model="event.name" name="name"></font></td>
+							</tr>
+				
+				            <tr>
+							<th align="center" width="190"><font color="black">location</font></th>
+							<td align="left" ><input type="text" ng-model="event.location" name="location"></font></td>
+							</tr>
+							
+							 <tr>
+							<th align="center" width="190"><font color="black">venue</font></th>
+							<td align="left" ><input type="text" ng-model="event.venue" name="venue"></font></td>
+							</tr>
+							
+							<tr>
+							<td><input type="submit" value="ADD"></td>
+                             <td><input type="reset" value="CLEAR"></td>
+						    </tr>
+							
+							
+					</table>
+					</form>
+					</div>
+					
+					<div class="row text-center">
+     				</div>  
+					</div>
+					</div>
+			</div>
+</div>
+
+</body>
+</html>
+
+
+ -->
+

@@ -2,40 +2,111 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+
+<title>Insert title here</title> 
+  <style>
+  body{
+		background: url(resources/image/background.jpg);
+	}
+  </style>
+</head>
+
+<body>
+<div ng-controller="UserController">
+</div>
+
+
+<div class="container-fluid" ng-repeat="u in users">    
+<div ng-if="u.status == 'A'">	  
+    							
+						<div class="col-xs-7">
+			<div class="panel panel-info" >
+				<div class="panel-heading">
+					<div class="row">	
+
+				<div class="panel-body" style="background-color:#ffcc99">
+
+					<div class="row">
+						<div class="col-xs-8">
+						 <span class="w3-xlarge"><h3>User Name: {{u.name}}</h3></span>
+						 
+						<span class="w3-xlarge"><h3>Email: {{u.email}}</h3></span>
+						 
+							<span class="w3-large"><h3>Date of birth: {{u.date_of_birth}}</h3></span> 
+							
+							 </div>
+							 
+							<div class="col-xs-2">
+	 
+     <span><a href="" ng-click="friendRequest(u.id)" class="btn btn btn-success">SEND REQUEST</a></span>
+     
+							</div>
+						</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+					</div>
+					</body>
+					</html>
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
 </head>
 <body>
 
-<h1>list of users</h1>
-
-<table border="3px">
-<tr>
+<table>
+  <tr>
 <th>ID</th>
 <th>NAME</th>
-<th>ADDRESS</th>
 <th>EMAIL</th>
-<th>MOBILE_NUMBER</th>
-<th>DATE_OF_BIRTH</th>
+<th>GENDER</th>
+<th>DATE.OF.BIRTH</th>
 <th>STATUS</th>
-<th>IS_ONLINE</th>
+<th>ISONLINE</th>
 <th>ROLE</th>
-<th>REASON</th>
-</tr>
+  </tr>
+  
 <tr ng-repeat="u in users">
 <td>{{u.id}}</td>
 <td>{{u.name}}</td>
-<td>{{u.address}}</td>
 <td>{{u.email}}</td>
-<td>{{u.mobile_number}}</td>
+<td>{{u.gender}}</td>
 <td>{{u.date_of_birth}}</td>
 <td>{{u.status}}</td>
 <td>{{u.is_online}}</td>
 <td>{{u.role}}</td>
-<td>{{u.reason}}</td>
+
+<td><a href="" ng-click="friendRequest(u.id)">sendfriendRequest</a></td>
+
 </tr>
 </table>
 
-
-
 </body>
-</html>
+</html> -->

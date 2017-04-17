@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+
+<title>Insert title here</title>
+
+</head>
+ <style>
+  body{
+		background:url(resources/image/sp.jpg);
+	}
+  </style>
+<body>
+<!-- <h2>{{blogs}}</h2> -->
+ <div  ng-controller="FunctionController as ctrl"> 
+ <div class="container-fluid" ng-repeat="b in blogs">       
+    							
+						<div class="col-xs-7">
+			<div class="panel panel-info" >
+				<div class="panel-heading">
+					<div class="row">	
+
+				<div class="panel-body" style="background-color:#ebb728">
+
+					<div class="row" >
+						<div class="col-xs-10">
+						 <span class="w3-xlarge"><h3>Blog Name: {{b.name}}</h3></span>
+						 
+						<span class="w3-xlarge"><h3>Username: {{b.userID}}</h3></span>
+						
+						 <span class="w3-large"><h3>Status: {{b.status}}</h3></span>
+						 
+							<span class="w3-large"><h3>Description: {{b.description}}</h3></span>
+							
+							 <span class="w3-large"><h3>Date & Time: {{b.dateTime}}</h3></span><br>
+							 
+							 </div>
+							 
+							<div class="col-xs-2">
+							<br><br><br>
+	 <a ng-hide="b.status == 'A'" class="btn btn-success btn-md" href="" data-ng-click="ctrl.acceptBlog(b)">Accept Blog </a>
+	  <a ng-hide="b.status == 'R'" class="btn btn-danger btn-md" href="" data-ng-click="ctrl.rejectBlog(b)">Reject Blog</a>
+	
+	  
+     <br>
+     <br>
+   
+	            </div>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				
+					</div>
+					</div>
+  
+</body>
+</html>

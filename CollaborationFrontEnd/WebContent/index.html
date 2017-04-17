@@ -3,33 +3,118 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="lib/js/jquery-3.2.0.min.js"></script>
+  <script src="lib/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="lib/css/bootstrap.css">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster&effect=brick-sign">
+<style type="text/css">
+	body
+	{
+		padding-top: 75px;
+	}
+</style>
 </head>
-<body>
 
-<h1><center>Collaboration</center></h1>
+  
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+      <div class="w3-container w3-lobster">
+  <p class="w3-xxxlarge">CHAT</p>
+  </div>
+     </a>
+    </div>
 
-<hr>
-<a href="#/blog">Blog</a>
-<a href="#/friend">Friend</a>
-<a href="#/job">Job</a>
-<a href="#/register">Sign Up</a>
-<a href="#/listUser">UserList</a>
-<a href="#/blogList">BlogList</a>
-<a href="#/jobList">JobList</a>
-<a href="#/forum">Forum</a>
-<a href="#/forumList">ForumList</a>
-<hr>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+      
+         <li ng-show="currentUser.id" class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blogs <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#/blog">Add blog</a></li>
+            <li><a href="#/blogList">View Blog</a></li>
+          </ul>
+        </li>
+         
+         <li ng-show="currentUser.id" class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Forums <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#/forum">Add forum</a></li>
+            <li><a href="#/forumList">View Forum</a></li>
+          </ul>
+        </li>
+        
+           <li><a ng-show="currentUser.id" href="#/jobList">Jobs</a></li>
+           
+            <li><a ng-show="currentUser.id" href="#/eventList">Events</a></li>
+            
+             <li><a ng-show="currentUser.id" href="#/friend">Friend</a></li>
+           
+       <!--  <li ng-show="currentUser.id" class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Jobs <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#/job">Apply for job</a></li> 
+            <li><a href="#/jobList">View jobs</a></li>
+          </ul>
+        </li> -->
+        
+      <!--     <li ng-show="currentUser.id" class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Events <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#/eventList">View Events</a></li>
+          </ul>
+        </li>  -->
+       
+          </ul>
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+      <li><a ng-if="currentUser.role == 'admin'" href="#/admin">Admin</a></li>   
+        <li><a ng-hide="currentUser.id" href="#/login"><span class="glyphicon glyphicon-log-in"> Login</span></a></li>
+        <li ng-show="currentUser.id"><a href="#/profile"><img alt="image1" src="images/{{currentUser.id}}" class="img-circle" height="40" width="40"></a></li>
+ <li ng-controller="UserController as ctrl"><a ng-show="currentUser.id" href="" ng-click="ctrl.logout()"><span class="glyphicon glyphicon-log-out"> Logout</span></a></li> 
+      </ul>
+     
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+  
+  <footer style="position: fixed; bottom: 0px; width: 100%; height: 40px; background-color:black;">
+   
+  </footer>                                 
+
+
+<div ng-controller="UserController as ctrl">
 
 <div ng-view></div>
-
+</div>
 </body>
 <script src="lib/angular.min.js"></script>
 <script src="lib/angular-route.js"></script>
+<script src="lib/angular-cookies.js"></script>
+<script src="lib/sockjs.js"></script>
+<script src="lib/stomp.js"></script>
 
 <script src="js/app.js"></script>
 <script src="js/HomeController.js"></script>
 <script src="js/BlogController.js"></script>
 <script src="js/FriendController.js"></script>
+<script src="js/FriendService.js"></script>
 <script src="js/JobController.js"></script>
 <script src="js/ForumController.js"></script>
 <script src="js/UserController.js"></script>
@@ -37,4 +122,12 @@
 <script src="js/BlogService.js"></script>
 <script src="js/JobService.js"></script>
 <script src="js/ForumService.js"></script>
+<script src="js/EventController.js"></script>
+<script src="js/EventService.js"></script>
+<script src="js/ChatController.js"></script>
+<script src="js/ChatService.js"></script>
+<script src="js/AdminController.js"></script>
+<script src="js/AdminService.js"></script>
+<script src="js/FunctionController.js"></script>
 </html>
+

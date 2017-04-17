@@ -28,8 +28,13 @@ import com.niit.collaboration.model.Forum;
 		    System.out.println("Add - "+forum.getId());
 		    forumDAO.add(forum);
 			
-			//forum.setId(12);
-			//forumDAO.delete(forum);
+			/*forum.setId(12);
+			forum.setName("werrdd1");
+			forum.setDateTime("24/02/2017");
+			forum.setDescription("cfdf");
+			forum.setStatus("sdfg");
+			forum.setUserID("78");
+			forumDAO.delete(forum);*/
 			
 		    System.out.println("Success");
 		}

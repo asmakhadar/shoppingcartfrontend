@@ -3,6 +3,67 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+ <style>
+  body{
+		background:url(resources/image/job3.jpg);	
+	}
+  
+  </style>
+  
+
+</head>
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<body>
+
+  <div class="w3-container">
+  
+  <div class="w3-card-4" style="width:50%;">
+    <header class="w3-container w3-blue">
+      <h1>Post Job</h1>
+    </header>
+  
+  
+      <form class="w3-container ">
+  <br>
+   <p> 
+  <label class="w3-label w3-validate">Job</label></p>
+  <input class="w3-input" type="text" ng-model="job.job_id" name="job_id"  placeholder="Enter jobID " required="true">
+  <p>      
+  <label class="w3-label w3-validate">Company</label></p>
+  <input class="w3-input" type="text" ng-model="job.title" name="title"  placeholder="Enter job Title " required="true">
+  <p>      
+   <label class="w3-label w3-validate">Location</label></p>
+  <input class="w3-input" type="text" ng-model="job.location" name="location" placeholder="Job location" ng-minlength="5" ng-maxlength="100" required="true">
+  <p>      
+  <label class="w3-label w3-validate">Salary</label></p>
+  <input class="w3-input" type="text" ng-model="job.salary" name="salary" placeholder="Enter salary" ng-minlength="5" required="true">
+  <p>   
+     <label class="w3-label w3-validate">Description</label></p>
+  <input class="w3-input" type="text" ng-model="job.description" name="description" placeholder="Enter job Description" ng-minlength="5" ng-maxlength="500" required="true"> 
+  
+   <footer class="w3-container w3-blue">
+  <button class="w3-btn w3-success w3-right" value="addJob" ng-click="addJob()">POST JOB</button></p>
+  </footer>
+  
+  
+ 
+</form>
+</div>
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
 </head>
 <body>
 
@@ -10,6 +71,54 @@
 <h2 style="color:red">{{errorMessage}}</h2>
 </div>
 <h2>JOB</h2>
+
+<div class="container" style="align:center">
+			<div class="row">  
+                <div class="col-sm-6">
+                    <div class="panel panel-default" >
+                     <div class="panel-body" style="background-color:white">
+                     <form role="form" ng-submit="addJob()">
+					<table class="table table-striped">
+					
+<tr>
+<tr>
+							
+							<tr>
+							<th align="center" width="190"><font color="black">title</font></th>
+							<td align="left" ><font color="black"> <input type="text" ng-model="job.title" name="title"></font></td>
+							</tr>
+				
+				            <tr>
+							<th align="center" width="190"><font color="black">Description</font></th>
+							<td align="left" ><input type="text" ng-model="job.description" name="description"></font></td>
+							</tr>
+							
+							<tr>
+							<th align="center" width="190"><font color="black">qualification</font></th>
+							<td align="left" ><font color="black"> <input type="text" ng-model="job.qualification" name="qualification"></font></td>
+							</tr>
+							<tr>
+							<td><input type="submit" value="ADD"></td>
+                             <td><input type="reset" value="CLEAR"></td>
+						    </tr>
+							
+							
+					</table>
+					</form>
+					</div>
+					
+					<div class="row text-center">
+     				</div>  
+					</div>
+					</div>
+			</div>
+</div>
+
+</body>
+</html>
+
+
+
 
 <form>
 
@@ -26,4 +135,4 @@ STATUS: <input type="text" ng-model="job.status" name="status"><br><br>
 </form>
 
 </body>
-</html>
+</html> -->

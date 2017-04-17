@@ -1,5 +1,7 @@
 package com.niit.collaboration.model;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -12,18 +14,62 @@ public class User_Detail extends BaseDomain
 	@Id
 	private String id;
 	private String name;
-	private String address;
 	private String email;
 	private String password;
+	private String gender;
 	private String date_of_birth;
-	private String mobile_number;
 	private String status;
-	private String reason;
 	private String role;
 	private String is_online;
+	private Date last_Seen_Time;
+	private String company;
+	private String skills;
+	private String address;
+	private String aboutu;
+	private String phone_number;
+	
+	
+	
+	public String getPhone_number() {
+		return phone_number;
+	}
+	public void setPhone_number(String phone_number) {
+		this.phone_number = phone_number;
+	}
+	public String getCompany() {
+		return company;
+	}
+	public void setCompany(String company) {
+		this.company = company;
+	}
+	public String getSkills() {
+		return skills;
+	}
+	public void setSkills(String skills) {
+		this.skills = skills;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public String getAboutu() {
+		return aboutu;
+	}
+	public void setAboutu(String aboutu) {
+		this.aboutu = aboutu;
+	}
+	public Date getLast_Seen_Time() {
+		return last_Seen_Time;
+	}
+	public void setLast_Seen_Time(Date last_Seen_Time) {
+		this.last_Seen_Time = last_Seen_Time;
+	}
 	public String getId() {
 		return id;
 	}
+	
 	public void setId(String id) {
 		this.id = id;
 	}
@@ -33,17 +79,19 @@ public class User_Detail extends BaseDomain
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getAddress() {
-		return address;
-	}
-	public void setAddress(String address) {
-		this.address = address;
-	}
+
 	public String getEmail() {
 		return email;
 	}
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
 	}
 	public String getPassword() {
 		return password;
@@ -58,24 +106,13 @@ public class User_Detail extends BaseDomain
 		this.date_of_birth = date_of_birth;
 	}
 	
-	public String getMobile_number() {
-		return mobile_number;
-	}
-	public void setMobile_number(String mobile_number) {
-		this.mobile_number = mobile_number;
-	}
 	public String getStatus() {
 		return status;
 	}
 	public void setStatus(String status) {
 		this.status = status;
 	}
-	public String getReason() {
-		return reason;
-	}
-	public void setReason(String reason) {
-		this.reason = reason;
-	}
+
 	public String getRole() {
 		return role;
 	}

@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 import org.springframework.stereotype.Component;
 
@@ -25,6 +26,55 @@ import org.springframework.stereotype.Component;
 	private String dateTime;	
 	private String qualification;
 	private String status;
+	private String skills;
+	private String location;
+	private String salary;
+	private String job_id;
+	
+	
+	public String getJob_id() {
+		return job_id;
+	}
+
+	public void setJob_id(String job_id) {
+		this.job_id = job_id;
+	}
+
+	@Transient
+	private String date1;
+	
+	public String getDate1() {
+		return date1;
+	}
+
+	public void setDate1(String date1) {
+		this.date1 = date1;
+	}
+
+	
+	public String getSkills() {
+		return skills;
+	}
+
+	public void setSkills(String skills) {
+		this.skills = skills;
+	}
+
+	public String getLocation() {
+		return location;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
+	}
+
+	public String getSalary() {
+		return salary;
+	}
+
+	public void setSalary(String salary) {
+		this.salary = salary;
+	}
 
 	public long getId() {
 		return id;

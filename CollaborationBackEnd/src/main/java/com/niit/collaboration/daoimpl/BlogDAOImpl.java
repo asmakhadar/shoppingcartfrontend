@@ -1,6 +1,6 @@
 package com.niit.collaboration.daoimpl;
 
-	import java.util.List;
+import java.util.List;
 	import org.hibernate.Query;
 	import org.hibernate.SessionFactory;
 	import org.slf4j.Logger;
@@ -11,7 +11,7 @@ package com.niit.collaboration.daoimpl;
 	import org.springframework.transaction.annotation.Transactional;
 
     import com.niit.collaboration.dao.BlogDAO;
-    import com.niit.collaboration.model.Blog;
+import com.niit.collaboration.model.Blog;
 
 
 
@@ -35,10 +35,12 @@ package com.niit.collaboration.daoimpl;
 		}
 	}
 	
+
 	@Transactional
 		public boolean add(Blog blog) 
 	{
 			sessionFactory.getCurrentSession().save(blog);
+	
 			return false;
 		}
 
@@ -67,5 +69,11 @@ package com.niit.collaboration.daoimpl;
 			 return query.list();
 		}
 
+		@Transactional
+		public void update(Blog blog) 
+		{
+			sessionFactory.getCurrentSession().update(blog);			
+		}
 
+	
 }

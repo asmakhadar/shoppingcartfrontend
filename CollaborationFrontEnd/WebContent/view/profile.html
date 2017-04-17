@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html">
+  <title></title>
+  <meta name="author" content="Jake Rocheleau">
+  <link rel="shortcut icon" href="http://static.tmimgcdn.com/img/favicon.ico">
+  <link rel="icon" href="http://static.tmimgcdn.com/img/favicon.ico">
+  <link rel="stylesheet" type="text/css" media="all" href="lib/profile css/css/styles.css">
+<!--   <link rel="stylesheet" type="text/css" media="all" href="lib/profile css/css/switchery.min.css"> -->
+<!--   <script type="text/javascript" src="js/switchery.min.js"></script>  -->
+</head>
+<!-- <style>
+  body{
+		background: url(resources/image/profile.jpg);
+	}
+  </style>  -->
+<body>
+<div ng-controller="UserController">
+</div>
+
+<div class="w3-container">
+  
+  <div>
+   <img src="images/{{currentUser.id}}" alt="user" class="w3-card-4" width="250px" height="250px" >
+   <br>
+    <br>
+     <br>
+   <div class="w3-container">
+      <a href="#/fileUpload" class="btn-lg btn-danger">upload photo</a>
+      </div>
+    </div>
+  </div>
+<br>				
+  <div id="wrapper">
+ 
+  <div class="col-12">
+  <form onsubmit="return false">
+  <div class="col-2">
+    <label>
+      UserName
+      <input placeholder="Private" id="name" name="name" ng-model="currentUser.id"  tabindex="1" disabled="disabled">
+    </label>
+  </div>
+  <div class="col-2">
+    <label>
+      Name
+      <input placeholder="Private" id="date of birth" name="date of birth" ng-model="currentUser.name" disabled="disabled" tabindex="7">
+    </label>
+  </div> 
+  
+  <div class="col-2">
+    <label>
+      Phone Number
+      <input placeholder="Private" id="phone" name="phone" ng-model=currentUser.phone_number" tabindex="3" disabled="disabled">
+    </label>
+  </div>
+  <div class="col-2">
+    <label>
+      Email
+      <input placeholder="Private" id="email" name="email" ng-model="currentUser.email" tabindex="4" disabled="disabled">
+    </label>
+  </div>
+<!--   <div class="col-3">
+    <label>
+      Place
+      <input placeholder="Where do you live?" id="place" name="place" ng-model="user.address" tabindex="7">
+    </label>
+  </div>
+  
+  <div class="col-4">
+    <label>
+      Skills
+      <input placeholder="List a few of your primary skills" id="skills" name="skills" ng-model="user.skills" tabindex="6">
+    </label>
+  </div>
+  
+   <div class="col-4">
+    <label>
+      Company
+      <input placeholder="Where do you currently work?" id="company" name="company" ng-model="user.company" tabindex="2">
+    </label>
+  </div>
+  
+   <div class="col-4">
+   <label ng-model="user.gender">
+       Gender
+      <select tabindex="5">
+        <option value="M">Male</option>
+        <option value="F">Female</option>
+      </select> 
+    </label>
+  </div>
+  
+  <div class="col-4 switch">
+    <label>
+      AboutU
+      <input placeholder="about u?" id="company" name="company" ng-model="user.aboutu" tabindex="2">
+    </label>
+  </div> -->
+ 
+  </form>
+  </div>
+<script type="text/javascript">
+var elems = Array.prototype.slice.call(document.querySelectorAll('.js-switch'));
+
+elems.forEach(function(html) {
+  var switchery = new Switchery(html);
+});
+</script>
+</body>
+</html>
+ 
+ 
+ 
+ 

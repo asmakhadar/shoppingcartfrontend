@@ -7,7 +7,7 @@ app.controller('BlogController', function($scope,$location,BlogService){
 	   $scope.blog={id:'',name:'',userID:'',dateTime:'',status:'',reason:'',description:'',}
 		
 	   $scope.msg;
-
+	   
 	   $scope.registerBlog=function()
 	   {
 		   console.log('entering function save in blog controller')
@@ -26,6 +26,8 @@ app.controller('BlogController', function($scope,$location,BlogService){
 					});
 		      
 	   }
+	   
+	  
 		
 	   function getAllBlog(){
 	   console.log('entering get all blog')
@@ -40,4 +42,6 @@ app.controller('BlogController', function($scope,$location,BlogService){
    getAllBlog()
   
 	})
-	 
+	
+	
+	

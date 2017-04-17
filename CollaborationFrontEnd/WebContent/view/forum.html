@@ -3,26 +3,112 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+
 </head>
+ <style>
+  body{
+		background:url(resources/image/job.jpg);
+		
+	}
+  
+  </style>
+  
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 <body>
 
-<div ng-controller="ForumController">
-<h2 style="color:red">{{errorMessage}}</h2>
+  <div class="w3-container">
+  
+  <div class="w3-card-4" style="width:50%;">
+  
+    <header class="w3-container w3-blue">
+      <h1>Post Your Forum</h1>
+    </header>
+  <p>
+  
+  <form class="w3-container ">
+  <br>
+  <p>      
+  <label class="w3-label w3-validate">Forum Title</label></p>
+  <input class="w3-input" type="text" ng-model="forum.name"  name="name" placeholder="forum Title" required>
+  <p>      
+  <label class="w3-label w3-validate">Description</label></p>
+ <textarea class="form-control" rows="4" id="comment" ng-model="forum.description" required ng-minlength="5" ng-maxlength="500" placeholder="forum description" required></textarea> 
+ <!--  <input class="w3-input" type="text" ng-model="forum.description"  name="description" required> -->
+      
+   <br>  
+   <footer class="w3-container w3-blue">
+  <button class="w3-btn w3-success w3-right" value="add forum" ng-click="addForum()">ADD FORUM</button></p>
+  </footer>
+  </form>
+  
+  
+  
 </div>
-<h2>FORUM</h2>
+</div>
 
-<form>
-
-NAME: <input type="text" ng-model="forum.name" name="name"><br><br>
-DESCRIPTION: <input type="text" ng-model="forum.description" name="description"><br><br>
-USERID: <input type="text" ng-model="forum.userID" name="userID"><br><br>
-DATE: <input type="text" ng-model="forum.dateTime" name="dateTime"><br><br>
-STATUS: <input type="text" ng-model="forum.status" name="status"><br><br>
-
-<input type="button" ng-click="addForum()" value="ADD">
-<input type="reset" value="CLEAR">
-
-</form>
 
 </body>
 </html>
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div ng-controller = "ForumController">
+<h2 style="color:red">{{errorMessage}}</h2>
+</div>
+
+<h2>FORUM</h2>
+
+<div class="container" style="align:center">
+			<div class="row">  
+                <div class="col-sm-6">
+                    <div class="panel panel-default" >
+                     <div class="panel-body" style="background-color:white">
+                     <form role="form" ng-submit="addForum()">
+					<table class="table table-striped">
+					
+<tr>
+							
+							<tr>
+							<th align="center" width="190"><font color="black">Name</font></th>
+							<td align="left" ><font color="black"> <input type="text" ng-model="forum.name" name="name"></font></td>
+							</tr>
+				
+				            <tr>
+							<th align="center" width="190"><font color="black">Description</font></th>
+							<td align="left" ><input type="text" ng-model="forum.description" name="description"></font></td>
+							</tr>
+							
+							<tr>
+							<td><input type="submit" value="ADD"></td>
+                             <td><input type="reset" value="CLEAR"></td>
+						    </tr>
+							
+							
+					</table>
+					</form>
+					</div>
+					
+					<div class="row text-center">
+     				</div>  
+					</div>
+					</div>
+			</div>
+</div>
+
+</body>
+</html>
+
+
+
+
+ -->

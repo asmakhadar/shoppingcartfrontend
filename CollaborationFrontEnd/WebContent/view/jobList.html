@@ -2,34 +2,63 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+
 <title>Insert title here</title>
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+  <style>
+  body{
+		background:url(resources/image/job4.jpg);	
+	}
+  
+  </style>
+  
+
 </head>
 <body>
-<h1>list of jobs</h1>
+<div ng-controller="JobController">
+</div>
 
-<table border="3px">
-<tr>
-<th>ID</th>
-<th>Title</th>
-<th>Description</th>
-<th>UserID</th>
-<th>Date</th>
-<th>Qualification</th>
-<th>Status</th>
-</tr>
 
-<tr ng-repeat="j in jobs">
+<div class="container-fluid" ng-repeat="j in jobs">      
+    							
+						<div class="col-xs-7">
+			<div class="panel panel-info" >
+				<div class="panel-heading">
+					<div class="row">	
 
-<td>{{j.id}}</td>
-<td>{{j.title}}</td>
-<td>{{j.description}}</td>
-<td>{{j.userID}}</td>
-<td>{{j.dateTime}}</td>
-<td>{{j.qualification}}</td>
-<td>{{j.status}}</td>
-</tr>
+				<div class="panel-body" style="background-color:lightgray">
 
-</table>
+					<div class="row">
+						<div class="col-xs-10">
 
-</body>
-</html>
+                           <span class="w3-xlarge"><h3>Job: {{j.job_id}}</h3></span>
+ 
+						   <span class="w3-xlarge"><h3>Job Title: {{j.title}}</h3></span>
+						
+						   <span class="w3-large"><h3>Salary: {{j.salary}}</h3></span>
+							
+						   <span class="w3-large"><h3>Location: {{j.location}}</h3></span>
+							  
+						   <span class="w3-large"><h3>Description: <p>{{j.description}}</p></h3></span><br>
+							   
+						   <span class="w3-large"><h3>Date & Time: {{j.dateTime}}</h3></span><br>
+							   
+							 </div>
+							 
+							<!-- <div class="col-xs-2">
+							<br><br><br> -->
+	<!-- <button type="button" class="btn btn btn-primary"  ng-click="applied()">Accept</button>
+     <br>
+     <br>
+     <button type="button" class="btn btn btn-primary"  ng-click="applied()">Reject</button> -->
+							</div>
+						</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				
+					</div>
+					</body>
+					</html>

@@ -17,4 +17,6 @@ public interface User_DetailDAO
 	
 	public User_Detail validate(String id, String password);
 
+	public void update(User_Detail user_Detail);
+
 }

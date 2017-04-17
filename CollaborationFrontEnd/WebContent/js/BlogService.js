@@ -14,10 +14,10 @@ app.factory('BlogService' ,function($http,$q){
 					return $q.reject(errResponse);
 				}
 				);
-			
 		},
 		
 		
+
 		
 		getAllBlog:function(){
 			console.log('entering getAllBlog in blog service')
@@ -25,9 +25,9 @@ app.factory('BlogService' ,function($http,$q){
 	}
 		
 		
-		
-		
-		
+	
 	}
 		
 });
+
+

@@ -4,7 +4,7 @@ app.controller('JobController', function($scope,$location,JobService){
 	
 		 $scope.jobs;
 
-	   $scope.job={id:'',title:'',description:'',userID:'',dateTime:'',qualification:'',status:'',}
+	   $scope.job={id:'',title:'',description:'',userID:'',dateTime:'',qualification:'',status:'',job_id:'',date1:'',}
 		
 	   $scope.msg;
 
